@@ -10,8 +10,12 @@ import click
 
 #Multiples values
 @click.option("--salary", "-s", type = int ,nargs=2, help="Your Monthly Salary")
-def main(name, favorites, salary):
+
+# Multiple option: example my-cli -l paris -l Berlin
+@click.option("--location", "-l", help="locations you've visited", multiple=True)
+def main(name, favorites, salary, location):
     click.echo("Hello World, My name is {} and my monthly salary is {}. These are my fovorites activities: {}".format(name,favorites, sum(salary)))
+    click.echo("\n".join(location))
 
 
 
