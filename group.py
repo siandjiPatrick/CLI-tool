@@ -29,7 +29,7 @@ def create(object_name,all):
 
 @main.command(help="delete object")
 def delete():
-    click.echo("Delete Object")
+    click.secho("Delete Object",fg="yellow")
 
 
 #main.add_command(cmd="delete")
