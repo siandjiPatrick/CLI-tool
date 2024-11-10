@@ -3,7 +3,7 @@ import click
 
 
 @click.command()
-@click.option("--name", prompt=True, default="patrick")
+@click.option("--name", prompt="Enter Your Name", default="patrick")
 
 def main(name):
     click.echo(f" Your name is {name}")
