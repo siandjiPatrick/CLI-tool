@@ -3,10 +3,11 @@ import click
 
 
 @click.command()
-@click.option("--name", prompt="Enter Your Name", default="patrick")
+@click.option("--name", default="patrick", help="Your Name Description")
 
 def main(name):
-    click.echo(f" Your name is {name}")
+    fname= click.prompt("Enter your Name")
+    click.echo(f" Your name is {fname}")
     
 if __name__=="__main__":
     main()
