@@ -3,8 +3,11 @@ import click
 
 @click.command()
 
-def main():
-    click.echo("Hello ")
+# work with argument
+@click.argument('name', default="patrick")
+
+def main(name):
+    click.echo("Hello {}".format(name))
     
 
 
