@@ -11,7 +11,7 @@ import click
 #Multiples values
 @click.option("--salary", "-s", type = int ,nargs=2, help="Your Monthly Salary")
 def main(name, favorites, salary):
-    print(f"Hello World, My name is {name} and my monthly salary is {sum(salary)}. These are my fovorites activities: {favorites}")
+    click.echo("Hello World, My name is {} and my monthly salary is {}. These are my fovorites activities: {}".format(name,favorites, sum(salary)))
 
 
 
